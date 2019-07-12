@@ -67,7 +67,7 @@ object Utils {
         Utils.toInitials(" ", "") //null
         */
 
-        var first = firstName?.trim()
+        /*var first = firstName?.trim()
         var last = lastName?.trim()
 
         if (first != null && first != "") {
@@ -87,6 +87,11 @@ object Utils {
         if (first == null && last != null) {
             return "$last"
         }
-        return "$first$last".capitalize()
+        return "$first$last".capitalize()*/
+
+        val first = firstName?.trimStart()?.firstOrNull()
+        val second = lastName?.trimStart()?.firstOrNull()
+
+        return listOfNotNull(first, second).joinToString("").toUpperCase().takeIf {it.isNotEmpty()}
     }
 }
