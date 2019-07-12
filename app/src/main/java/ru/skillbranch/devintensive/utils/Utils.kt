@@ -92,6 +92,6 @@ object Utils {
         val first = firstName?.trimStart()?.firstOrNull()
         val second = lastName?.trimStart()?.firstOrNull()
 
-        return listOfNotNull(first, second).joinToString("").toUpperCase().takeIf {it.isNotEmpty()}
+        return listOfNotNull(first, second).joinToString("").toUpperCase().takeIf { it.isNotEmpty() }
     }
 }
