@@ -47,11 +47,11 @@ enum class TimeUnits {
             in 1..1 -> if (value in 11..11) st else st.replace("секунд", "секунду").replace(
                 "минут",
                 "минуту"
-            ).replace("часов", "час").replace("дней","день")
+            ).replace("часов", "час").replace("дней", "день")
             in 2..4 -> if (value in 12..14) st else st.replace("секунд", "секунды").replace(
                 "минут",
                 "минуты"
-            ).replace("часов", "часа").replace("дней","дня")
+            ).replace("часов", "часа").replace("дней", "дня")
             else -> st
         }
     }
