@@ -60,35 +60,6 @@ object Utils {
     }
 
     fun toInitials(firstName: String?, lastName: String?): String? {
-        /*
-        Utils.toInitials("john" ,"doe") //JD
-        Utils.toInitials("John", null) //J
-        Utils.toInitials(null, null) //null
-        Utils.toInitials(" ", "") //null
-        */
-
-        /*var first = firstName?.trim()
-        var last = lastName?.trim()
-
-        if (first != null && first != "") {
-            first = first[0].toString()
-        }
-        if (last != null && last != "") {
-            last = last[0].toString()
-        }
-
-        if ((first == "" || first == null) && (last == "" || last == null)) {
-            return null
-        }
-
-        if (first != null && last == null) {
-            return "$first"
-        }
-        if (first == null && last != null) {
-            return "$last"
-        }
-        return "$first$last".capitalize()*/
-
         val first = firstName?.trimStart()?.firstOrNull()
         val second = lastName?.trimStart()?.firstOrNull()
 
